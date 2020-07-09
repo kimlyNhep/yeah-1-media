@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Menu, Segment } from "semantic-ui-react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = { activeItem: "home" };
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+
+  render() {
+    const { activeItem } = this.state;
+
+    return (
+      <Segment inverted>
+        <Menu inverted pointing secondary>
+          <Menu.Item
+            name="home"
+            active={activeItem === "home"}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Item
+            name="messages"
+            active={activeItem === "messages"}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Item
+            name="friends"
+            active={activeItem === "friends"}
+            onClick={this.handleItemClick}
+          />
+        </Menu>
+      </Segment>
+    );
+  }
 }
-
-export default App;
