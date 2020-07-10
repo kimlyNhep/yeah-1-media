@@ -1,18 +1,26 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Container } from 'semantic-ui-react';
 import logo from '../../pictures/logo.png';
 
-export default class MenuExampleSecondaryPointing extends Component {
+class Navbar extends Component {
   state = { activeItem: 'home' };
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   render() {
     const { activeItem } = this.state;
+    const { fixed } = this.props;
 
     return (
-      <div>
-        <Menu pointing secondary>
+      <Menu
+        fixed={fixed ? 'top' : null}
+        inverted={!fixed}
+        pointing={!fixed}
+        secondary={!fixed}
+        size="large"
+      >
+        <Container>
           <Menu.Menu position="left">
             <img src={logo} alt="logo" width="112px" />
           </Menu.Menu>
@@ -48,8 +56,18 @@ export default class MenuExampleSecondaryPointing extends Component {
               onClick={this.handleItemClick}
             />
           </Menu.Menu>
-        </Menu>
-      </div>
+        </Container>
+      </Menu>
     );
   }
 }
+
+export default Navbar;
+
+Navbar.propTypes = {
+  fixed: PropTypes.bool,
+};
+
+Navbar.defaultProps = {
+  fixed: false,
+};

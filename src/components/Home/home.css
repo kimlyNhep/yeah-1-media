@@ -1,6 +1,7 @@
 .home-container {
   background-image: url('../../pictures/home-back.jpeg');
   height: 100vh;
+  width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
 }

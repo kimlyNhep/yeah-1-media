@@ -10,6 +10,7 @@ import {
   Button,
 } from 'semantic-ui-react';
 import getWidth from '../../utils/components/helpers';
+import HomepageHeading from './homepageheading';
 
 class MobileContainer extends Component {
   state = {};
@@ -68,7 +69,7 @@ class MobileContainer extends Component {
                 </Menu.Item>
               </Menu>
             </Container>
-            {/* <HomepageHeading mobile /> */}
+            <HomepageHeading mobile />
           </Segment>
 
           {children}
