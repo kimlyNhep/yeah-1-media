@@ -1,0 +1,49 @@
+.home-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+}
+
+.nav-container {
+  position: absolute;
+  top: 1rem;
+  width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.invert-navbar {
+  padding: 0.3rem;
+  padding-left: 2rem;
+}
+
+.view-project-container {
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-project-text {
+  color: whitesmoke;
+  font-family: 'Fira Code';
+}
+
+.home-header {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu-navbar {
+  border: none !important;
+  padding: 0.3rem;
+  padding-left: 2rem;
+}

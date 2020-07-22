@@ -8,12 +8,14 @@ import {
   Button,
   Container,
   Divider,
-  List,
+  List
 } from 'semantic-ui-react';
-import ResponsiveContainer from './responsive-container';
+import ResponsiveContainer from '../../utils/Navbar/responsive-container';
+import Homebanner from '../../pictures/home-back.jpeg';
+import HomepageHeading from './homepageheading';
 
 const HomepageLayout = () => (
-  <ResponsiveContainer>
+  <ResponsiveContainer header={<HomepageHeading />} banner={Homebanner}>
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign="middle">
         <Grid.Row>

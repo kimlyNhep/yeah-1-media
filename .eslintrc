@@ -25,6 +25,12 @@
         "ignoreRegExpLiterals": true
       }
     ],
-    "react/state-in-constructor": "off"
+    "react/state-in-constructor": "off",
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "auto"
+      }
+    ]
   }
 }
